@@ -33,11 +33,27 @@ export function exercise04(args) {
   const input = args
   let count = 0
 
-  for (let i = 0; i < input.length; i++) {
+  for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
+    const previousElement = input[i - 1]
 
-    if (currentElement === "32") {
-      count = count + 2
+    if (currentElement === " " && previousElement != "-") {
+      count = count + 1
+    }
+  }
+  return count + 1
+}
+
+export function exercise05(args) {
+  const input = args
+  let count = 0
+
+  for (let i = 1; i < input.length; i++) {
+    const currentElement = input[i]
+    if (
+      currentElement.charCodeAt() >= 65 &&
+      currentElement.charCodeAt() <= 90
+    ) {
     }
   }
 }
